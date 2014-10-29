@@ -3,22 +3,15 @@ CRM Application Skeleton
 
 This is the application skeleton that will host the following main components:
 
+* Symfony 2
 * Oro Platform
 * Jab CRM
 
-
-Oro Platform Empty Application
-==============================
-
-An example of an empty application using the Oro Platform.
-
-This repository contains application configuration settings and depends on Oro Platform. It can be used as a starting point to build applications using the oro Platform.
+After installation you will have a fully working CRM application using the above mentioned main components.
 
 ## Requirements
 
-Oro Platform is a Symfony 2 based application with the following requirements:
-
-* PHP 5.4.9 or above with command line interface
+* PHP 5.4.9 or above with command line interface(CLI)
 * PHP Extensions
     * GD
     * Mcrypt
@@ -28,8 +21,7 @@ Oro Platform is a Symfony 2 based application with the following requirements:
     * SimpleXML
     * PCRE
     * ICU
-* MySQL 5.1 or above
-* PostgreSQL 9.1 or above
+* MySQL 5.1 or above OR PostgreSQL 9.1 or above
 
 ## Installation instructions
 

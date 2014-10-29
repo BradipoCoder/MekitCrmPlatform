@@ -1,7 +1,7 @@
 {
-    "name": "oro/platform-application",
-    "description": "Oro Platform Empty Application",
-    "homepage": "https://github.com/orocrm/platform-application.git",
+    "name": "jab/crm-platform-skeleton",
+    "description": "CRM Platform Skeleton",
+    "homepage": "https://bitbucket.org/jakabadambalazs/crm-platform-skeleton.git",
     "license": "MIT",
     "autoload": {
         "psr-0": {
