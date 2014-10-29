@@ -12,7 +12,7 @@ After installation you will have a fully working CRM application using the above
 ## Requirements
 
 * PHP 5.4.9 or above with command line interface(CLI)
-* PHP Extensions 
+* PHP Extensions
     * GD
     * Mcrypt
     * JSON
