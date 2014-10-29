@@ -15,18 +15,22 @@
         }
     ],
     "require": {
-        "symfony/symfony": "2.5.4"
+        "oro/platform": "1.4.x-dev"
     },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets"
         ]
     },
     "minimum-stability": "dev",
