@@ -1,5 +1,5 @@
 CRM Application Skeleton
-==============================
+=============================
 
 This is the application skeleton that will host the following main components:
 
