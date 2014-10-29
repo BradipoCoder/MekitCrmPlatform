@@ -1,4 +1,4 @@
-CRM Application Skeleton
+CRM Application Skeleton(1.0)
 =============================
 
 This is the application skeleton that will host the following main components:
