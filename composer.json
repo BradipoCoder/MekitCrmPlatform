@@ -1,7 +1,7 @@
 {
     "name": "jab/crm-platform-skeleton",
     "description": "CRM Platform Skeleton",
-    "homepage": "https://bitbucket.org/jakabadambalazs/crm-platform-skeleton.git",
+    "homepage": "https://github.com/adamjakab/crm-platform-skeleton.git",
     "license": "MIT",
     "autoload": {
         "psr-0": {
