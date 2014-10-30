@@ -5,7 +5,6 @@
 .directory
 /node_modules
 /composer.phar
-composer.lock
 /build/logs/*
 /tmp
 /src
