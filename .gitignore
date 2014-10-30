@@ -1,12 +1,14 @@
 /.settings
+/.idea
 /.buildpath
 /.project
-/.idea
+.directory
 /node_modules
 /composer.phar
 composer.lock
 /build/logs/*
 /tmp
+/src
 /vendor
 /cov
 /web/bundles
@@ -18,5 +20,5 @@ composer.lock
 /app/config/parameters.yml
 /app/config/parameters_test.yml
 *~
-.directory
+
 /app/SymfonyRequirements.php
