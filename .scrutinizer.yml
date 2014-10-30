@@ -14,5 +14,4 @@ checks:
 
 filter:
     excluded_paths:
-        - 'app/*'
         - '/app/Resources/php/cssmin-v3.0.1.php'
