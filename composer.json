@@ -1,5 +1,6 @@
 {
     "name": "jab/crm-platform-skeleton",
+    "type": "project",
     "description": "CRM Platform Skeleton",
     "homepage": "https://github.com/adamjakab/crm-platform-skeleton.git",
     "license": "MIT",

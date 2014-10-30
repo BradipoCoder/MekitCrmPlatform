@@ -7,11 +7,4 @@ checks:
     php:
         code_rating: true
         duplication: true
-        verify_property_names: true
-        no_eval: true
-        security_vulnerabilities: true
-        sql_injection_vulnerabilities: true
 
-filter:
-    excluded_paths:
-        - '/app/Resources/php/cssmin-v3.0.1.php'
