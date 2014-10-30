@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "oro/platform": "1.4.x-dev"
+        "oro/platform": "1.4.x-dev",
+        "mekit/crm": "1.x-dev"
     },
     "scripts": {
         "post-install-cmd": [
