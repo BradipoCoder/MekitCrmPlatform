@@ -21,6 +21,7 @@ checks:
     duplication: true
 
 build:
+  container: 'g/adamjakab/ScrutinizerSymfony2Container@master'
   environment:
     php: 5.5.12
   dependencies:
