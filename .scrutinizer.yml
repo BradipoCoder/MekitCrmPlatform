@@ -32,8 +32,5 @@ build:
 
 
 application:
-    type: symfony2
-    boot_commands:
-      override:
-        - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+    type: none
 
