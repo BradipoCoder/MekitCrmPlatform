@@ -32,5 +32,7 @@ build:
 
 
 application:
-    type: none
+    type: custom
+    boot_commands:
+      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
 
