@@ -1,9 +1,11 @@
 tools:
-    php_sim: true
-    php_analyzer: false
-    php_pdepend: false
+  php_sim: true
+  php_analyzer:
+    enabled: false
+  php_pdepend:
+    enabled:false
 
 checks:
-    php:
-        code_rating: true
-        duplication: true
+  php:
+    code_rating: true
+    duplication: true
