@@ -12,7 +12,7 @@ filter:
 
 tools:
   php_sim: true
-  php_analyzer: true
+  php_analyzer: false
   php_pdepend: false
 
 checks:
