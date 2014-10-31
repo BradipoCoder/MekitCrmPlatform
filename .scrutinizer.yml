@@ -3,6 +3,19 @@ filter:
     - 'app/*'
     - 'vendor/*'
 
+tools:
+  php_sim: true
+  php_analyzer: true
+  php_pdepend: true
+  sensiolabs_security_checker: true
+  php_changetracking: true
+
+
+checks:
+  php:
+    code_rating: true
+    duplication: true
+
 build:
   environment:
     php: 5.5.12
@@ -16,5 +29,4 @@ build:
 
 application:
     type: symfony2
-    boot_commands: {  }
-
+    boot_commands: { }
