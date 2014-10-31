@@ -1,9 +1,8 @@
 before_commands:
-  - composer --global config process-timeout 1800
-  - php -r "sleep(5);"
-  - composer --global config process-timeout
-  - composer install --prefer-source --no-interaction
-
+  - { command: 'composer --global config process-timeout 1800' }
+  - { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
+  - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+  - { command: 'cp composer.lock ../artifacts/composer.lock', only_if: 'test -e composer.lock' }
 
 tools:
   php_sim: true
@@ -24,7 +23,7 @@ build:
       #- { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
       #- { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
     override:
-      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+      #- { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
     after:
       #- 'cp composer.lock ../artifacts/composer.lock'
   project_setup:
@@ -32,7 +31,7 @@ build:
 
 
 application:
-    type: custom
-    boot_commands:
-      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+    type: none
+    boot_commands: {  }
+
 
