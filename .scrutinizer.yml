@@ -12,9 +12,10 @@ checks:
 
 
 build:
-  dependencies:
+  environment:
     before:
       - 'composer --global config process-timeout 1800'
+      - 'php -r "sleep(10)";'
       -
           command: 'composer install --prefer-dist --no-interaction'
           idle_timeout: 1800
