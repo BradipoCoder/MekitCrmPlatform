@@ -1,15 +1,12 @@
 filter:
   excluded_paths:
-    - 'vendor/*'
-    - 'tests/*'
     - 'app/*'
-    - 'bin/*'
-    - 'library/*'
+    - 'vendor/*'
 
 tools:
   php_sim: true
-  php_analyzer: false
-  php_pdepend: false
+  php_analyzer: true
+  php_pdepend: true
 
 checks:
   php:
@@ -21,20 +18,13 @@ build:
     php: 5.5.12
   dependencies:
     before:
-      - { command: 'composer --global config process-timeout 1800' }
-      - { command: 'cp vendor/composer.lock ./composer.lock', only_if: 'test -e vendor/composer.lock' }
-      - { command: 'composer install --prefer-source --no-interaction --verbose', idle_timeout: 1800 }
-      - { command: 'cp composer.lock vendor/composer.lock', only_if: 'test -e composer.lock' }
     override:
+      - { command: 'composer install --prefer-source --no-interaction --verbose', idle_timeout: 1800 }
     after:
   project_setup:
   tests:
-  cache:
-    directories:
-      - 'vendor/'
 
 application:
     type: none
     boot_commands: {  }
-
 
