@@ -10,17 +10,16 @@ checks:
 
 
 build:
+  environment:
+    php: 5.5.12
   dependencies:
     before:
       - 'composer --global config process-timeout 1800'
-      - { command: 'composer install --prefer-dist --no-interaction', idle_timeout: 1800 }
+      - 'cp ../artifacts/composer.lock ./composer.lock'
+      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+    after:
+      - 'cp composer.lock ../artifacts/composer.lock'
   project_setup:
-      before:
-        - 'composer --global config process-timeout 1800'
-        - { command: 'composer install --prefer-dist --no-interaction', idle_timeout: 1800 }
   tests:
-      before:
-        - 'composer --global config process-timeout 1800'
-        - { command: 'composer install --prefer-dist --no-interaction', idle_timeout: 1800 }
 
 
