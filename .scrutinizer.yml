@@ -23,6 +23,8 @@ build:
       #- 'composer --global config process-timeout 1800'
       #- { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
       #- { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+    override:
+      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
     after:
       #- 'cp composer.lock ../artifacts/composer.lock'
   project_setup:
