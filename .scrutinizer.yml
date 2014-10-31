@@ -1,8 +1,9 @@
 filter:
     excluded_paths: [vendor/*, tests/*]
 
-#before_commands:
-    #- 'composer install --dev --prefer-source'
+before_commands:
+    - 'composer selfupdate'
+    - 'COMPOSER_PROCESS_TIMEOUT=1200 composer install --dev --prefer-source'
 
 tools:
     php_sim: true
@@ -14,7 +15,7 @@ tools:
     php_mess_detector: true
     php_code_sniffer: true
     sensiolabs_security_checker: true
-    php_pdepend: true
+    php_pdepend: false
     php_loc:
         enabled: true
         excluded_dirs: [vendor, tests]
