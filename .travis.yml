@@ -9,7 +9,7 @@ env:
 before_script:
   - php -i
   - composer selfupdate
-  - composer install --no-interaction
+  - composer install --no-interaction --prefer-source
 
 script:
   - phpunit -c phpunit.xml.dist --coverage-text --coverage-clover=coverage.clover.xml
