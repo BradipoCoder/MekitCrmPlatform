@@ -25,6 +25,6 @@ build:
   tests:
 
 application:
-    type: none
+    type: symfony2
     boot_commands: {  }
 
