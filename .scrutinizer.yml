@@ -1,9 +1,8 @@
-filter:
+#filter:
     #excluded_paths: [vendor/*, tests/*]
 
 before_commands:
-    - 'composer config process-timeout 1800'
-    - 'composer install --no-interaction --prefer-source'
+    - 'composer config process-timeout 1800 && composer install --no-interaction --prefer-source'
 
 tools:
     php_sim: true
