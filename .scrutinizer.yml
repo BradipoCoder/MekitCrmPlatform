@@ -1,7 +1,10 @@
 tools:
   php_sim: true
   php_analyzer:
-    enabled: false
+    enabled: true
+    before:
+      - 'php -r "sleep(10);"'
+
   php_pdepend:
     enabled: false
 
@@ -12,11 +15,9 @@ checks:
 
 
 build:
-  environment:
+  dependencies:
     before:
       - 'composer --global config process-timeout 1800'
-      - 'php -r "sleep(10)";'
       -
           command: 'composer install --prefer-dist --no-interaction'
           idle_timeout: 1800
-
