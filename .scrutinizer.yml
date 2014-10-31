@@ -3,7 +3,7 @@ tools:
   php_analyzer:
     enabled: false
   php_pdepend:
-    enabled:false
+    enabled: false
 
 checks:
   php:
