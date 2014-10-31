@@ -34,6 +34,6 @@ build:
 application:
     type: symfony2
     boot_commands:
-      - 'echo "FICUS!"'
-      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+      override:
+        - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
 
