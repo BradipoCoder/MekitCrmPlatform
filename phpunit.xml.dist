@@ -3,7 +3,7 @@
 <phpunit
          backupGlobals="false"
          colors="true"
-         bootstrap="bootstrap.php.cache"
+         bootstrap="app/bootstrap.php.cache"
         >
     <testsuites>
         <testsuite name="Project Test Suite">
