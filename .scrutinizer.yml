@@ -5,8 +5,7 @@ before_commands:
   - 'composer --global config process-timeout 1800'
   - 'php -r "sleep(5);"'
   - 'composer --global config process-timeout'
-  - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
-
+  - 'composer install --prefer-source --no-interaction'
 
 
 tools:
