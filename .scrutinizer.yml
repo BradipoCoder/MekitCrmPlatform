@@ -1,7 +1,3 @@
-before_commands:
-  - 'composer --global config process-timeout 1800'
-  - 'test -e ../artifacts/composer.lock && cp ../artifacts/composer.lock ./composer.lock'
-
 filter:
   excluded_paths:
     - 'vendor/*'
@@ -26,16 +22,16 @@ build:
   dependencies:
     before:
       - { command: 'composer --global config process-timeout 1800' }
-      - { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
+      - { command: 'cp vendor/composer.lock ./composer.lock', only_if: 'test -e vendor/composer.lock' }
       - { command: 'composer install --prefer-source --no-interaction --verbose', idle_timeout: 1800 }
-      - { command: 'cp composer.lock ../artifacts/composer.lock', only_if: 'test -e composer.lock' }
+      - { command: 'cp composer.lock vendor/composer.lock', only_if: 'test -e composer.lock' }
     override:
     after:
   project_setup:
   tests:
   cache:
     directories:
-      - 'artifacts'
+      - 'vendor/'
 
 application:
     type: none
