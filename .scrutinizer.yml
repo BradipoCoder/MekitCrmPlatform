@@ -34,6 +34,5 @@ build:
 application:
     type: symfony2
     boot_commands:
-        override:
-            - 'composer install --prefer-source'
+      - 'composer install --prefer-source --no-interaction --verbose'
 
