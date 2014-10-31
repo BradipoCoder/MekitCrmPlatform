@@ -33,7 +33,9 @@ build:
     after:
   project_setup:
   tests:
-
+  cache:
+    directories:
+      - 'artifacts'
 
 application:
     type: none
