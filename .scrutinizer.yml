@@ -31,3 +31,9 @@ build:
   tests:
 
 
+application:
+    type: symfony2
+    boot_commands:
+        inference:
+            - 'composer install --prefer-source'
+
