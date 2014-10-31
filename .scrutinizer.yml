@@ -1,27 +1,7 @@
-#filter:
-    #excluded_paths: [vendor/*, tests/*]
-
-before_commands:
-    - 'composer config process-timeout 1800 && composer install --no-interaction --prefer-source'
-
 tools:
     php_sim: true
     php_analyzer: false
     php_pdepend: false
-    php_code_coverage: false
-    sensiolabs_security_checker: true
-    #external_code_coverage:
-            #timeout: 1200    # Timeout in seconds.
-
-    #php_mess_detector: true
-    #php_code_sniffer: true
-
-    #php_loc:
-        #enabled: true
-        #excluded_dirs: [vendor, tests]
-    #php_cpd:
-        #enabled: true
-        #excluded_dirs: [vendor, tests]
 
 checks:
     php:
