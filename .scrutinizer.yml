@@ -1,8 +1,8 @@
 before_commands:
-  - 'composer --global config process-timeout 1800'
-  - 'php -r "sleep(5);"'
-  - 'composer --global config process-timeout'
-  - 'composer install --prefer-source --no-interaction'
+  - composer --global config process-timeout 1800
+  - php -r "sleep(5);"
+  - composer --global config process-timeout
+  - composer install --prefer-source --no-interaction
 
 
 tools:
