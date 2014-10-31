@@ -15,4 +15,14 @@ build:
   dependencies:
     before:
       - 'composer --global config process-timeout 1800'
-      - 'composer install --prefer-dist --no-interaction'
+      -
+        command: 'composer install --prefer-dist --no-interaction'
+        environment: { COMPOSER_PROCESS_TIMEOUT: 1800 }
+        idle_timeout: 1800
+  project_setup:
+    before:
+    - 'composer --global config process-timeout 1800'
+    -
+      command: 'composer install --prefer-dist --no-interaction'
+      environment: { COMPOSER_PROCESS_TIMEOUT: 1800 }
+      idle_timeout: 1800
