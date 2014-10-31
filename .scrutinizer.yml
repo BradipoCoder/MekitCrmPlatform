@@ -1,8 +1,6 @@
 before_commands:
-  - { command: 'composer --global config process-timeout 1800' }
-  - { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
-  - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
-  - { command: 'cp composer.lock ../artifacts/composer.lock', only_if: 'test -e composer.lock' }
+  - 'composer --global config process-timeout 1800'
+  - 'test -e ../artifacts/composer.lock && cp ../artifacts/composer.lock ./composer.lock'
 
 tools:
   php_sim: true
