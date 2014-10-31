@@ -9,3 +9,16 @@ checks:
   php:
     code_rating: true
     duplication: true
+
+
+build:
+  dependencies:
+    before:
+      - 'composer --global config process-timeout 1800'
+      - 'composer install --prefer-dist --no-interaction'
+
+application:
+    type: symfony2
+    boot_commands:
+        inference:
+            - 'composer install --prefer-dist'
