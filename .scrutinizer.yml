@@ -1,3 +1,14 @@
+import:
+  - php
+
+before_commands:
+  - 'composer --global config process-timeout 1800'
+  - 'php -r "sleep(5);"'
+  - 'composer --global config process-timeout'
+  - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+
+
+
 tools:
   php_sim: true
   php_analyzer: true
@@ -8,17 +19,16 @@ checks:
     code_rating: true
     duplication: true
 
-
 build:
   environment:
     php: 5.5.12
   dependencies:
     before:
-      - 'composer --global config process-timeout 1800'
-      - { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
-      - { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
+      #- 'composer --global config process-timeout 1800'
+      #- { command: 'cp ../artifacts/composer.lock ./composer.lock', only_if: 'test -e ../artifacts/composer.lock' }
+      #- { command: 'composer install --prefer-source --no-interaction', idle_timeout: 1800 }
     after:
-      - 'cp composer.lock ../artifacts/composer.lock'
+      #- 'cp composer.lock ../artifacts/composer.lock'
   project_setup:
   tests:
 
