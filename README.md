@@ -1,7 +1,7 @@
 CRM Application Skeleton
 =========================
 
-[![Build Status](https://travis-ci.org/adamjakab/crm-platform-skeleton.svg?branch=master)](https://travis-ci.org/adamjakab/crm-platform-skeleton)
+[![Build Status](https://travis-ci.org/adamjakab/crm-platform-skeleton.svg?branch=1.0)](https://travis-ci.org/adamjakab/crm-platform-skeleton)
 
 This is the application skeleton that will host the following main components:
 
