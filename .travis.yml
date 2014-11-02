@@ -5,7 +5,7 @@ php:
 
 before_script:
   - composer selfupdate
-  - composer install -vv --profile --no-interaction --prefer-source
+  - composer install --profile --no-interaction
 
 script:
   - phpunit -c phpunit.xml.dist --coverage-text
