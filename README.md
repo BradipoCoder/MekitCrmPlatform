@@ -1,7 +1,7 @@
 CRM Application Skeleton
 =========================
 
-[![Build Status](https://scrutinizer-ci.com/g/adamjakab/crm-platform-skeleton/badges/build.png?b=master)](https://scrutinizer-ci.com/g/adamjakab/crm-platform-skeleton/build-status/master)
+[![Build Status](https://travis-ci.org/adamjakab/crm-platform-skeleton.svg?branch=master)](https://travis-ci.org/adamjakab/crm-platform-skeleton)
 
 This is the application skeleton that will host the following main components:
 

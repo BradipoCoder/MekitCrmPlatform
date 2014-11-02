@@ -2,24 +2,21 @@ language: php
 
 php:
   - 5.5
+  - hhvm
 
-env:
-  - SYMFONY_VERSION=2.3.*
+allow_failures:
+    - php: hhvm
 
 before_script:
-  - php -i
   - composer selfupdate
   - composer install --no-interaction --prefer-source
 
 script:
   - phpunit -c phpunit.xml.dist --coverage-text --coverage-clover=coverage.clover.xml
-  # - phpcs --ignore=/vendor/*,/Tests/Resources/app/* --extensions=php --encoding=utf-8 --standard=PSR2 -np .
 
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover.xml
 
-matrix:
-  allow_failures:
-    - env: SYMFONY_VERSION=dev-master
+cache:
+  directories:
+    - $COMPOSER_CACHE_DIR
 
