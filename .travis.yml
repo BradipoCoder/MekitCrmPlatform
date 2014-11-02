@@ -12,9 +12,11 @@ before_script:
   - composer install --no-interaction --prefer-source
 
 script:
-  - phpunit -c phpunit.xml.dist --coverage-text --coverage-clover=coverage.clover.xml
+  - phpunit -c phpunit.xml.dist --coverage-text
 
 after_script:
+  - composer update
+  - phpunit -c phpunit.xml.dist --coverage-text
 
 cache:
   directories:
