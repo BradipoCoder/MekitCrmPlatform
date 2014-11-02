@@ -4,7 +4,8 @@ php:
   - 5.5
   - hhvm
 
-allow_failures:
+matrix:
+  allow_failures:
     - php: hhvm
 
 before_script:
@@ -15,10 +16,11 @@ script:
   - phpunit -c phpunit.xml.dist --coverage-text
 
 after_script:
-  - composer update
-  - phpunit -c phpunit.xml.dist --coverage-text
 
 cache:
   directories:
     - $COMPOSER_CACHE_DIR
 
+notifications:
+    on_success: never
+    on_failure: always
