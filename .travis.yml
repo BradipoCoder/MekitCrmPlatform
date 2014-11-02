@@ -5,6 +5,7 @@ php:
 
 before_script:
   - composer selfupdate
+  - composer require symfony/symfony --prefer-source
   - composer install --no-interaction --prefer-source
 
 script:
