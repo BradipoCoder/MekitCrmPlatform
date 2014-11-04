@@ -3009,12 +3009,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/adamjakab/mekit-crm-application.git",
-                "reference": "862e6bfadf54ea004cfc36eb58639d9bb9ad6708"
+                "reference": "ccf8cbaf43233c0950ad46ab241824a3014f8727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adamjakab/mekit-crm-application/zipball/862e6bfadf54ea004cfc36eb58639d9bb9ad6708",
-                "reference": "862e6bfadf54ea004cfc36eb58639d9bb9ad6708",
+                "url": "https://api.github.com/repos/adamjakab/mekit-crm-application/zipball/ccf8cbaf43233c0950ad46ab241824a3014f8727",
+                "reference": "ccf8cbaf43233c0950ad46ab241824a3014f8727",
                 "shasum": ""
             },
             "require": {
@@ -3043,7 +3043,7 @@
             ],
             "description": "Mekit CRM Application",
             "homepage": "https://github.com/adamjakab/mekit-crm-application.git",
-            "time": "2014-10-30 21:57:10"
+            "time": "2014-11-03 17:52:09"
         },
         {
             "name": "monolog/monolog",
