@@ -1,3 +1,4 @@
+/_TMPRES
 /.settings
 /.idea
 /.buildpath
@@ -16,6 +17,8 @@
 /web/uploads/users/*
 /web/media/cache
 /web/build.js
+/web/info.php
 /app/config/parameters.yml
 /app/config/parameters_test.yml
+/app/config/logs/*
 *~
