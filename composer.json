@@ -10,12 +10,12 @@
             "url": "http://packagist.orocrm.com"
         }, {
             "type": "git",
-            "url": "https://github.com/adamjakab/mekit-crm-application"
+            "url": "https://github.com/adamjakab/MekitCrmApplication"
         }
     ],
     "require": {
         "oro/platform": "1.4.x-dev",
-        "mekit/crm": "dev-master"
+        "mekit/crm-application": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
