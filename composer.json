@@ -1,8 +1,8 @@
 {
     "name": "mekit/crm-platform",
     "type": "project",
-    "description": "CRM Platform Skeleton",
-    "homepage": "https://github.com/adamjakab/crm-platform-skeleton.git",
+    "description": "Mekit CRM Platform Skeleton",
+    "homepage": "https://github.com/adamjakab/MekitCrmPlatform.git",
     "license": "MIT",
     "repositories": [
         {
