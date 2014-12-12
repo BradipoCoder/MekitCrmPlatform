@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "27b038d34abc2f06792469aa1f6d31f1",
+    "hash": "58c5fd3377cac5a346071038b5e687b6",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3004,18 +3004,12 @@
             "time": "2014-03-04 14:53:32"
         },
         {
-            "name": "mekit/crm",
+            "name": "mekit/crm-application",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/adamjakab/mekit-crm-application.git",
-                "reference": "f2a3ddf3530eca6056ab660b9fa99dee555689f9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/adamjakab/mekit-crm-application/zipball/f2a3ddf3530eca6056ab660b9fa99dee555689f9",
-                "reference": "f2a3ddf3530eca6056ab660b9fa99dee555689f9",
-                "shasum": ""
+                "url": "https://github.com/adamjakab/MekitCrmApplication",
+                "reference": "da1729761c3dd03b6f9ed3db8e80068540f7d742"
             },
             "require": {
                 "oro/platform": "1.4.x-dev"
@@ -3031,7 +3025,6 @@
                     "Mekit\\Bundle": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3042,8 +3035,8 @@
                 }
             ],
             "description": "Mekit CRM Application",
-            "homepage": "https://github.com/adamjakab/mekit-crm-application.git",
-            "time": "2014-12-05 15:18:44"
+            "homepage": "https://github.com/adamjakab/MekitCrmApplication.git",
+            "time": "2014-12-12 11:44:48"
         },
         {
             "name": "monolog/monolog",
@@ -4930,7 +4923,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "oro/platform": 20,
-        "mekit/crm": 20
+        "mekit/crm-application": 20
     },
     "prefer-stable": true,
     "platform": [],
