@@ -1,11 +1,17 @@
 language: php
-
 php:
+  - 5.4
   - 5.5
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
 
 before_script:
   - composer selfupdate
-  - composer install --profile --no-interaction
+  - composer install --no-interaction --prefer-source
+  - composer update
 
 script:
   - phpunit -c phpunit.xml.dist --coverage-text
