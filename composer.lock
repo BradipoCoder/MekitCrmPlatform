@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b7b6a8aa0e06a60edddb684ff1e2554",
+    "hash": "08644ed6c68032260eb3716f563faf72",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -2665,7 +2665,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -3009,12 +3009,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/adamjakab/MekitCrmApplication.git",
-                "reference": "228ca88649f2e0642ad07a092e34579734142c12"
+                "reference": "6923d7b74a816339d0f6598f4c017573447666d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adamjakab/MekitCrmApplication/zipball/228ca88649f2e0642ad07a092e34579734142c12",
-                "reference": "228ca88649f2e0642ad07a092e34579734142c12",
+                "url": "https://api.github.com/repos/adamjakab/MekitCrmApplication/zipball/6923d7b74a816339d0f6598f4c017573447666d2",
+                "reference": "6923d7b74a816339d0f6598f4c017573447666d2",
                 "shasum": ""
             },
             "require": {
@@ -3038,7 +3038,7 @@
             ],
             "description": "Mekit CRM Application",
             "homepage": "https://github.com/adamjakab/MekitCrmApplication.git",
-            "time": "2014-12-12 11:49:30"
+            "time": "2014-12-12 15:44:26"
         },
         {
             "name": "monolog/monolog",
