@@ -55,9 +55,9 @@ This will download the Mekit CRM platform and automatically install all required
 When all packages have been downloaded the installer will ask you the following questions and you need to provide the
 answers for them. In the parenthesis you will find the default answer to the question so if it satisfies you, just press \<Enter\>:
 
-- database_driver (pdo_mysql): You can only use MySql or PostgreSQL, so just press \<Enter\>
-- database_host (127.0.0.1): The ip address of your MySql database deployment
-- database_port (null): The port on which MySql communicates. If you are using the predefined(3306) port just press \<Enter\>
+- database_driver (pdo_mysql): You can use MySql(pdo_mysql) or PostgreSQL(pdo_pgsql)
+- database_host (127.0.0.1): The ip address of your database server deployment
+- database_port (null): The port on which database server communicates. If you are using the predefined port just press \<Enter\>
 - database_name (null): The name of your database. This database must exist.
 - database_user (null): The username to use to authenticate against the database server
 - database_password (null): The password to use to authenticate against the database server
