@@ -55,7 +55,7 @@ This will download the Mekit CRM platform and automatically install all required
 When all packages have been downloaded the installer will ask you the following questions and you need to provide the
 answers for them. In the parenthesis you will find the default answer to the question so if it satisfies you, just press \<Enter\>:
 
-- database_driver (pdo_mysql): You can only use MySql, so just press \<Enter\>
+- database_driver (pdo_mysql): You can only use MySql or PostgreSQL, so just press \<Enter\>
 - database_host (127.0.0.1): The ip address of your MySql database deployment
 - database_port (null): The port on which MySql communicates. If you are using the predefined(3306) port just press \<Enter\>
 - database_name (null): The name of your database. This database must exist.
@@ -134,50 +134,14 @@ Please refer to: http://symfony.com/doc/2.3/cookbook/configuration/web_server_co
 php app/console clank:server --env prod
 ```
 
-- Configure crontab or scheduled tasks execution to run the command below every minute:
+- Configure crontab for automatic execution of scheduled commands:
 
 ```bash
 php app/console oro:cron --env prod
 ```
  
-**Note:** ``app/console`` is a path from project root folder. Please make sure you are using full path for crontab configuration or if you running console command from other location.
+**Note:**  The above command must be put into your crontab manually (write this...). 
 
 ## Notes (to be written)
 
-Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs)
-
-Note that the port used in Websocket must be open in firewall for outgoing/incoming connections
-
-Using MySQL 5.6 on HDD is potentially risky because of performance issues
-
-Recommended configuration for this case:
-
-    innodb_file_per_table = 0
-
-And ensure that timeout has default value
-
-    wait_timeout = 28800
-
-See [Optimizing InnoDB Disk I/O][3] for more
-
-## PostgreSQL installation notes
-
-You need to load `uuid-ossp` extension for proper doctrine's `guid` type handling.
-Log into database and run sql query:
-
-```
-CREATE EXTENSION "uuid-ossp";
-```
-
-## Web Server Configuration
-
-The Oro Platform application is based on the Symfony standard application so web server configuration recommendations are the [same][5].
-
-## Package Manager Configuration
-
-Github OAuth token should be configured in package manager settings
-[1]:  http://symfony.com/doc/2.3/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
-[4]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-[5]:  http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html
+...
