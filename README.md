@@ -41,6 +41,8 @@ Make sure you have an updated and working composer installation. If this is not 
 ```
     php composer.phar selfupdate
 ```
+To spin up the process it can take some time because composer must calculate the dependencies for the packages.
+Just be patient.
 
 ### Download Mekit CRM Platform and Mekit CRM Application
  

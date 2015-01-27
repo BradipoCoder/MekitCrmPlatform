@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "oro/platform": "~1.4",
+        "oro/platform": "1.4.*",
         "mekit/crm-application": "~1.0"
     },
     "scripts": {
