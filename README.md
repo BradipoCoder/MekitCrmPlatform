@@ -27,39 +27,106 @@ After installation you will have a fully working CRM application using the above
 
 ## Installation instructions
 
-### Using Composer
+### Install and update Composer
 
-As both Symfony 2 and Oro Platform use [Composer][2] to manage their dependencies, this is the recommended way to install the Oro Platform.
+Make sure you have an updated and working composer installation. If this is not the case or you do not know what composer is then 
+ please refer to the instructions on http://getcomposer.org.
 
-If you don't have Composer yet, download it and follow the instructions on
-http://getcomposer.org/ or just run the following command:
-
-```bash
+- In short, you can grab it by typing:
+```
     curl -s https://getcomposer.org/installer | php
 ```
 
-- Clone https://github.com/orocrm/platform-application.git Platform Application project with
-
-```bash
-    git clone https://github.com/orocrm/platform-application.git
+- Make sure composer is in your path and update it by typing:
+```
+    php composer.phar selfupdate
 ```
 
-- Make sure that you have [NodeJS][4] installed
+### Download Mekit CRM Platform and Mekit CRM Application
+ 
+Go to the directory where you want to install the project an launch the install process:
 
-- Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
-  Go to crm-application folder and run composer installation:
-
-```bash
-php composer.phar install --prefer-dist --no-dev
+```
+    php composer.phar create-project mekit/crm-platform
 ```
 
-- Create the database with the name specified on previous step (default name is "bap_standard").
+This will download the Mekit CRM platform and automatically install all required dependencies.
 
-- Install application and admin user with Installation Wizard by opening install.php in the browser or from CLI:
+When all packages have been downloaded the installer will ask you the following questions and you need to provide the
+answers for them. In the parenthesis you will find the default answer to the question so if it satisfies you, just press \<Enter\>:
 
-```bash  
+- database_driver (pdo_mysql): You can only use MySql, so just press \<Enter\>
+- database_host (127.0.0.1): The ip address of your MySql database deployment
+- database_port (null): The port on which MySql communicates. If you are using the predefined(3306) port just press \<Enter\>
+- database_name (null): The name of your database. This database must exist.
+- database_user (null): The username to use to authenticate against the database server
+- database_password (null): The password to use to authenticate against the database server
+- mailer_transport (mail): You will configure this later, so just press \<Enter\>
+- mailer_host (127.0.0.1): You will configure this later, so just press \<Enter\>
+- mailer_port (null): You will configure this later, so just press \<Enter\>
+- mailer_encryption (null): You will configure this later, so just press \<Enter\>
+- mailer_user (null): You will configure this later, so just press \<Enter\>
+- mailer_password (null): You will configure this later, so just press \<Enter\>
+- websocket_host (127.0.0.1): You will configure this later, so just press \<Enter\>
+- websocket_port (8080): You will configure this later, so just press \<Enter\>
+- session_handler (session.handler.native_file): just press \<Enter\>
+- locale (en): just press \<Enter\>
+- secret (ThisTokenIsNotSoSecretSoChangeIt): just press \<Enter\>
+- installed (null): just press \<Enter\>
+
+All this information you have just typed in has now been saved into the file "app/config/parameters.yml" inside your project folder.
+You can make modifications to it manually before proceeding to the next step.
+
+When the installation has terminated you will find the application inside a folder named "crm-platform". You can freely
+rename and move this folder.
+
+### Run the installation process
+
+Enter the project directory:
+
+```
+cd crm-platform
+```
+
+and launch the installation process by using the CLI console command:
+
+```
 php app/console oro:install --env prod
 ```
+
+The installer will run requirements checks on your system and if all is ok it will proceed with the installation. If there
+are unmet requirements, the installer will tell you what problems you've got and it will halt. You will need to satisfy
+all requirements before you will be able to proceed by relaunching the same console command.
+
+After the installer has populated your database with tables and initial data, it will pause to ask you a few questions.
+As before, you will need to provide the answers:
+
+- Application URL (http://localhost/oro/): The URL from which the application will be accessible
+- Organization name (ORO): The name of your organization 
+- Username (admin): The username of the administrator
+- Email: The email of the administrator
+- First name: The first name of the administrator
+- Last name: The last name of the administrator
+- Password: The password of the administrator
+- Load sample data (y/n): Normally you'd say 'n'. Some bundles provide sample data for demonstration purposes, 
+
+The installer will run for another while to create and optimize some client side resources (css, js) and it will finally
+finish by saying: 'Oro Application has been successfully installed in prod mode.'
+
+
+### Set up web server
+
+The proper configuration of your web server is out of the scope of this guide but to get you up and running it it should be
+sufficient to set up a virtual host serving files from the subdirectory "web" under your project root. The '.htaccess' file
+inside this folder will instruct your Apache web server to serve the 'app.php' file automatically. 
+
+There are lots of ways to configure Apache or Nginx (these are the most recommended ones)  so this giude will not provide
+configuration instructions for them. The important thing is to set the base directory of your vhost to the
+"[project directory]/web" folder.
+
+Please refer to: http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html
+
+## Advanced configuration (to be written)
 
 - Enable WebSockets messaging
 
@@ -75,7 +142,7 @@ php app/console oro:cron --env prod
  
 **Note:** ``app/console`` is a path from project root folder. Please make sure you are using full path for crontab configuration or if you running console command from other location.
 
-## Installation notes
+## Notes (to be written)
 
 Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs)
 
