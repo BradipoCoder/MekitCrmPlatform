@@ -1,13 +1,11 @@
 CRM Application Skeleton
 =========================
 
-[![Build Status](https://travis-ci.org/adamjakab/MekitCrmPlatform.svg?branch=master)](https://travis-ci.org/adamjakab/MekitCrmPlatform)
-
 This is the application skeleton that will host the following main components:
 
 * Symfony 2
 * Oro Platform
-* Jab CRM
+* Mekit CRM
 
 After installation you will have a fully working CRM application using the above mentioned main components.
 
@@ -27,39 +25,108 @@ After installation you will have a fully working CRM application using the above
 
 ## Installation instructions
 
-### Using Composer
+### Install and update Composer
 
-As both Symfony 2 and Oro Platform use [Composer][2] to manage their dependencies, this is the recommended way to install the Oro Platform.
+Make sure you have an updated and working composer installation. If this is not the case or you do not know what composer is then 
+ please refer to the instructions on http://getcomposer.org.
 
-If you don't have Composer yet, download it and follow the instructions on
-http://getcomposer.org/ or just run the following command:
-
-```bash
+- In short, you can grab it by typing:
+```
     curl -s https://getcomposer.org/installer | php
 ```
 
-- Clone https://github.com/orocrm/platform-application.git Platform Application project with
+- Make sure composer is in your path and update it by typing:
+```
+    php composer.phar selfupdate
+```
+To spin up the process it can take some time because composer must calculate the dependencies for the packages.
+Just be patient.
 
-```bash
-    git clone https://github.com/orocrm/platform-application.git
+### Download Mekit CRM Platform and Mekit CRM Application
+ 
+Go to the directory where you want to install the project an launch the install process:
+
+```
+    php composer.phar create-project mekit/crm-platform
 ```
 
-- Make sure that you have [NodeJS][4] installed
+This will download the Mekit CRM platform and automatically install all required dependencies.
 
-- Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
-  Go to crm-application folder and run composer installation:
+When all packages have been downloaded the installer will ask you the following questions and you need to provide the
+answers for them. In the parenthesis you will find the default answer to the question so if it satisfies you, just press \<Enter\>:
 
-```bash
-php composer.phar install --prefer-dist --no-dev
+- database_driver (pdo_mysql): You can use MySql(pdo_mysql) or PostgreSQL(pdo_pgsql)
+- database_host (127.0.0.1): The ip address of your database server deployment
+- database_port (null): The port on which database server communicates. If you are using the predefined port just press \<Enter\>
+- database_name (null): The name of your database. This database must exist.
+- database_user (null): The username to use to authenticate against the database server
+- database_password (null): The password to use to authenticate against the database server
+- mailer_transport (mail): You will configure this later, so just press \<Enter\>
+- mailer_host (127.0.0.1): You will configure this later, so just press \<Enter\>
+- mailer_port (null): You will configure this later, so just press \<Enter\>
+- mailer_encryption (null): You will configure this later, so just press \<Enter\>
+- mailer_user (null): You will configure this later, so just press \<Enter\>
+- mailer_password (null): You will configure this later, so just press \<Enter\>
+- websocket_host (127.0.0.1): You will configure this later, so just press \<Enter\>
+- websocket_port (8080): You will configure this later, so just press \<Enter\>
+- session_handler (session.handler.native_file): just press \<Enter\>
+- locale (en): just press \<Enter\>
+- secret (ThisTokenIsNotSoSecretSoChangeIt): just press \<Enter\>
+- installed (null): just press \<Enter\>
+
+All this information you have just typed in has now been saved into the file "app/config/parameters.yml" inside your project folder.
+You can make modifications to it manually before proceeding to the next step.
+
+When the installation has terminated you will find the application inside a folder named "crm-platform". You can freely
+rename and move this folder.
+
+### Run the installation process
+
+Enter the project directory:
+
+```
+cd crm-platform
 ```
 
-- Create the database with the name specified on previous step (default name is "bap_standard").
+and launch the installation process by using the CLI console command:
 
-- Install application and admin user with Installation Wizard by opening install.php in the browser or from CLI:
-
-```bash  
+```
 php app/console oro:install --env prod
 ```
+
+The installer will run requirements checks on your system and if all is ok it will proceed with the installation. If there
+are unmet requirements, the installer will tell you what problems you've got and it will halt. You will need to satisfy
+all requirements before you will be able to proceed by relaunching the same console command.
+
+After the installer has populated your database with tables and initial data, it will pause to ask you a few questions.
+As before, you will need to provide the answers:
+
+- Application URL (http://localhost/oro/): The URL from which the application will be accessible
+- Organization name (ORO): The name of your organization 
+- Username (admin): The username of the administrator
+- Email: The email of the administrator
+- First name: The first name of the administrator
+- Last name: The last name of the administrator
+- Password: The password of the administrator
+- Load sample data (y/n): Normally you'd say 'n'. Some bundles provide sample data for demonstration purposes, 
+
+The installer will run for another while to create and optimize some client side resources (css, js) and it will finally
+finish by saying: 'Oro Application has been successfully installed in prod mode.'
+
+
+### Set up web server
+
+The proper configuration of your web server is out of the scope of this guide but to get you up and running it it should be
+sufficient to set up a virtual host serving files from the subdirectory "web" under your project root. The '.htaccess' file
+inside this folder will instruct your Apache web server to serve the 'app.php' file automatically. 
+
+There are lots of ways to configure Apache or Nginx (these are the most recommended ones)  so this giude will not provide
+configuration instructions for them. The important thing is to set the base directory of your vhost to the
+"[project directory]/web" folder.
+
+Please refer to: http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html
+
+## Advanced configuration (to be written)
 
 - Enable WebSockets messaging
 
@@ -67,50 +134,14 @@ php app/console oro:install --env prod
 php app/console clank:server --env prod
 ```
 
-- Configure crontab or scheduled tasks execution to run the command below every minute:
+- Configure crontab for automatic execution of scheduled commands:
 
 ```bash
 php app/console oro:cron --env prod
 ```
  
-**Note:** ``app/console`` is a path from project root folder. Please make sure you are using full path for crontab configuration or if you running console command from other location.
+**Note:**  The above command must be put into your crontab manually (write this...). 
 
-## Installation notes
+## Notes (to be written)
 
-Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs)
-
-Note that the port used in Websocket must be open in firewall for outgoing/incoming connections
-
-Using MySQL 5.6 on HDD is potentially risky because of performance issues
-
-Recommended configuration for this case:
-
-    innodb_file_per_table = 0
-
-And ensure that timeout has default value
-
-    wait_timeout = 28800
-
-See [Optimizing InnoDB Disk I/O][3] for more
-
-## PostgreSQL installation notes
-
-You need to load `uuid-ossp` extension for proper doctrine's `guid` type handling.
-Log into database and run sql query:
-
-```
-CREATE EXTENSION "uuid-ossp";
-```
-
-## Web Server Configuration
-
-The Oro Platform application is based on the Symfony standard application so web server configuration recommendations are the [same][5].
-
-## Package Manager Configuration
-
-Github OAuth token should be configured in package manager settings
-[1]:  http://symfony.com/doc/2.3/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
-[4]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-[5]:  http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html
+...
