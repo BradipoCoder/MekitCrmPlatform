@@ -1,14 +1,11 @@
-/_TMPRES
 /.settings
-/.idea
 /.buildpath
 /.project
-.directory
+/.idea
 /node_modules
 /composer.phar
+composer.lock
 /build/logs/*
-/tmp
-/src
 /vendor
 /cov
 /web/bundles
@@ -17,8 +14,8 @@
 /web/uploads/users/*
 /web/media/cache
 /web/build.js
-/web/info.php
 /app/config/parameters.yml
 /app/config/parameters_test.yml
-/app/config/logs/*
 *~
+
+/app/SymfonyRequirements.php
