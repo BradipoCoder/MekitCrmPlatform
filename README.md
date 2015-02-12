@@ -1,6 +1,6 @@
 CRM Application Skeleton
 =========================
-[![Build Status](https://travis-ci.org/adamjakab/MekitCrmPlatform.svg?branch=master)](https://travis-ci.org/adamjakab/MekitCrmPlatform)
+[![Build Status](https://travis-ci.org/adamjakab/MekitCrmPlatform.svg?branch=1.0)](https://travis-ci.org/adamjakab/MekitCrmPlatform)
 
 This is the application skeleton that will host the following main components:
 
