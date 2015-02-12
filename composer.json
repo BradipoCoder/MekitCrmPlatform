@@ -4,6 +4,12 @@
     "description": "Mekit CRM Platform Skeleton",
     "homepage": "https://github.com/adamjakab/MekitCrmPlatform.git",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mekit",
+            "homepage": "http://www.mekit.it"
+        }
+    ],
     "repositories": [
         {
             "type": "composer",
@@ -14,8 +20,8 @@
         }
     ],
     "require": {
-        "oro/platform": "1.x-dev",
-        "mekit/crm-application": "1.x-dev"
+        "oro/platform": "~1.6.0",
+        "mekit/crm-application": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
