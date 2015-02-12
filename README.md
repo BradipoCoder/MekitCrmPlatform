@@ -1,12 +1,12 @@
 CRM Application Skeleton
 =========================
+[![Build Status](https://travis-ci.org/adamjakab/MekitCrmPlatform.svg?branch=master)](https://travis-ci.org/adamjakab/MekitCrmPlatform)
 
 This is the application skeleton that will host the following main components:
 
 * Symfony 2
 * Oro Platform
 * Mekit CRM
-[![Build Status](https://travis-ci.org/adamjakab/MekitCrmPlatform.svg?branch=master)](https://travis-ci.org/adamjakab/MekitCrmPlatform)
 
 
 After installation you will have a fully working CRM application using the above mentioned main components.
