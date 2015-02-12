@@ -1,24 +1,19 @@
 parameters:
-    database_driver:        pdo_mysql
-    database_host:          127.0.0.1
-    database_port:          ~
-    database_name:          bap_dev_test
-    database_user:          root
-    database_password:      root
-
-    mailer_transport:       smtp
-    mailer_host:            127.0.0.1
-    mailer_port:            ~
-    mailer_encryption:      ~
-    mailer_user:            ~
-    mailer_password:        ~
-
-    # WebSocket server config
-    websocket_host:         "127.0.0.1"
-    websocket_port:         8080
-
-    session_handler:        ~
-
-    locale:                 en
-    secret:                 ThisTokenIsNotSoSecretChangeIt
-    installed:              ~
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: mekit_test
+    database_user: root
+    database_password: null
+    mailer_transport: mail
+    mailer_host: 127.0.0.1
+    mailer_port: null
+    mailer_encryption: null
+    mailer_user: null
+    mailer_password: null
+    websocket_host: 127.0.0.1
+    websocket_port: 8080
+    session_handler: session.handler.native_file
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt
+    installed: null
