@@ -4,6 +4,12 @@
     "description": "Mekit CRM Platform Skeleton",
     "homepage": "https://github.com/adamjakab/MekitCrmPlatform.git",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mekit",
+            "homepage": "http://www.mekit.it"
+        }
+    ],
     "repositories": [
         {
             "type": "composer",
@@ -38,6 +44,9 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "incenteev-parameters": {
