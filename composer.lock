@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0940d69c95893103b9281778b163b2c1",
+    "hash": "22685876945bb9a4c6c042272d202bfd",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -338,28 +338,28 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.0.0-alpha9",
+            "version": "1.0.0-alpha8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "eb1ce550ca51134ee619ad3e37f5a0b7e980dd24"
+                "reference": "1eb1df44a97fb2daca1bb8b007f3bee012f0aa46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/eb1ce550ca51134ee619ad3e37f5a0b7e980dd24",
-                "reference": "eb1ce550ca51134ee619ad3e37f5a0b7e980dd24",
+                "url": "https://api.github.com/repos/composer/composer/zipball/1eb1df44a97fb2daca1bb8b007f3bee012f0aa46",
+                "reference": "1eb1df44a97fb2daca1bb8b007f3bee012f0aa46",
                 "shasum": ""
             },
             "require": {
-                "justinrainbow/json-schema": "~1.1",
+                "justinrainbow/json-schema": "1.1.*",
                 "php": ">=5.3.2",
-                "seld/jsonlint": "~1.0",
+                "seld/jsonlint": "1.*",
                 "symfony/console": "~2.3",
                 "symfony/finder": "~2.2",
                 "symfony/process": "~2.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~3.7.10"
             },
             "suggest": {
                 "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages",
@@ -385,24 +385,26 @@
             ],
             "authors": [
                 {
-                    "name": "Nils Adermann",
-                    "email": "naderman@naderman.de",
-                    "homepage": "http://www.naderman.de"
-                },
-                {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de",
+                    "role": "Developer"
                 }
             ],
-            "description": "Composer helps you declare, manage and install dependencies of PHP projects, ensuring you have the right stack everywhere.",
+            "description": "Dependency Manager",
             "homepage": "http://getcomposer.org/",
             "keywords": [
                 "autoload",
                 "dependency",
                 "package"
             ],
-            "time": "2014-12-07 17:15:20"
+            "time": "2014-01-06 18:39:59"
         },
         {
             "name": "doctrine/annotations",
@@ -2410,35 +2412,22 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "1.3.7",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "87b54b460febed69726c781ab67462084e97a105"
+                "reference": "05ff6d8d79fe3ad190b0663d80d3f9deee79416c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/87b54b460febed69726c781ab67462084e97a105",
-                "reference": "87b54b460febed69726c781ab67462084e97a105",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/05ff6d8d79fe3ad190b0663d80d3f9deee79416c",
+                "reference": "05ff6d8d79fe3ad190b0663d80d3f9deee79416c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "require-dev": {
-                "json-schema/json-schema-test-suite": "1.1.0",
-                "phpdocumentor/phpdocumentor": "~2",
-                "phpunit/phpunit": "~3.7"
-            },
-            "bin": [
-                "bin/validate-json"
-            ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "JsonSchema": "src/"
@@ -2446,9 +2435,14 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "NewBSD"
             ],
             "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                },
                 {
                     "name": "Bruno Prieto Reis",
                     "email": "bruno.p.reis@gmail.com"
@@ -2458,12 +2452,9 @@
                     "email": "justin.rainbow@gmail.com"
                 },
                 {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
                     "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com"
+                    "email": "robert.schoenthal@gmail.com",
+                    "homepage": "http://digitalkaoz.net"
                 }
             ],
             "description": "A library to validate a json schema.",
@@ -2472,7 +2463,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2014-08-25 02:48:14"
+            "time": "2012-01-03 00:33:17"
         },
         {
             "name": "knplabs/gaufrette",
@@ -3004,14 +2995,14 @@
         },
         {
             "name": "mekit/crm-application",
-            "version": "dev-master",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adamjakab/MekitCrmApplication",
-                "reference": "85f5db367a24c9dd998d91af99ba4c777a8f1cbb"
+                "reference": "51ce7bd52e321adf37ff05c1221b7705f1cb646e"
             },
             "require": {
-                "oro/platform": "1.x-dev"
+                "oro/platform": "~1.6.0"
             },
             "type": "library",
             "extra": {
@@ -3035,7 +3026,7 @@
             ],
             "description": "Mekit CRM Application",
             "homepage": "https://github.com/adamjakab/MekitCrmApplication.git",
-            "time": "2015-02-10 14:43:22"
+            "time": "2015-02-12 15:43:46"
         },
         {
             "name": "michelf/php-markdown",
@@ -3437,16 +3428,16 @@
         },
         {
             "name": "oro/platform",
-            "version": "dev-master",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "958caa9c8f762661127e770a6096e66ee9c66513"
+                "reference": "66565d741b4b1db0ea792c61bce1cb22d6e75e88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/958caa9c8f762661127e770a6096e66ee9c66513",
-                "reference": "958caa9c8f762661127e770a6096e66ee9c66513",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/66565d741b4b1db0ea792c61bce1cb22d6e75e88",
+                "reference": "66565d741b4b1db0ea792c61bce1cb22d6e75e88",
                 "shasum": ""
             },
             "require": {
@@ -3454,7 +3445,7 @@
                 "akeneo/batch-bundle": "~0.3",
                 "ass/xmlsecurity": "1.0.0",
                 "besimple/soap": "0.2.2",
-                "composer/composer": "1.0.0-alpha9",
+                "composer/composer": "1.0.0-alpha8",
                 "doctrine/data-fixtures": "1.0.0",
                 "doctrine/dbal": "2.4.*",
                 "doctrine/doctrine-bundle": "1.2.0",
@@ -3530,7 +3521,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-02-10 07:19:58"
+            "time": "2015-01-20 14:47:04"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -5062,10 +5053,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "oro/platform": 20,
-        "mekit/crm-application": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
