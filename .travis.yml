@@ -13,16 +13,12 @@ before_script:
   - cp .travis.composer.config.json ~/.composer/config.json
   - composer selfupdate
   - phpenv config-add travis.php.ini
-  - composer install --no-interaction --prefer-dist
 
 script:
-  - phpunit -c phpunit.xml.dist --coverage-text
+  - composer install --no-interaction --prefer-dist
+  #- phpunit -c phpunit.xml.dist --coverage-text
 
 after_script:
-
-cache:
-  directories:
-    - $COMPOSER_CACHE_DIR
 
 notifications:
     on_success: never
