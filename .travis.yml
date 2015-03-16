@@ -16,7 +16,7 @@ before_script:
 
 script:
   - composer install --no-interaction --prefer-dist
-  #- phpunit -c phpunit.xml.dist --coverage-text
+  - composer update
 
 after_script:
 
