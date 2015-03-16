@@ -16,7 +16,6 @@ before_script:
 
 script:
   - composer install --no-interaction --prefer-dist
-  - composer update
 
 after_script:
 
